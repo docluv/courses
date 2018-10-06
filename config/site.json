@@ -1,0 +1,66 @@
+{
+    "Name": "PWA Courses",
+    "LongName": "PWA Courses",
+    "lowerAppName": "pwa courses",
+    "title": "Love2Dev: PWA Couse Demo Application",
+    "description": "Love2Dev offers front-end web development services that upgrade our clients to their customer's home screens. We also offer small buisness and church communication and digital asset management services.",
+    "facebook-publisher": "https://www.facebook.com/love2dev/",
+    "twitter": "ChrisLove",
+    "google-plus": "https://plus.google.com/b/110904107389779237581/?pageId=110904107389779237581",
+    "linkedin": "https://www.linkedin.com/in/love2dev",
+    "pinterest": "https://www.pinterest.com/docluv/",
+    "youtube": "https://www.youtube.com/channel/UC3mfh2MN-5D-zOyiRLp9H6g",
+    "apiroot": "https://w81236jopc.execute-api.us-east-1.amazonaws.com/test/",
+    "author": "Chris Love",
+    "company": "Love2Dev",
+    "production": false,
+    "domain": "https://courses.love2dev.com/",
+    "shell": "default",
+    "scripts": [
+        "js/libs/lazy.images.js",
+        "js/libs/ui/form.submission.js",
+        "js/boot.js"
+    ],
+    "css": [
+        "css/libs/font-awesome.min.css",
+        "css/site.css",
+        "css/hero.css",
+        "css/material-background.css",
+        "css/flex.css",
+        "css/animations.css",
+        "css/card.css",
+        "css/icon-blocks.css",
+        "css/pager.css",
+        "css/app/form.css",
+        "css/libs/a2hs.css",
+        "css/app/footer.css"
+    ],
+    "preloads": [{
+            "resource": "js/libs/lazy.images.js",
+            "as": "script"
+        },
+        {
+            "resource": "js/libs/ui/form.submission.js",
+            "as": "script"
+        },
+        {
+            "resource": "js/boot.js",
+            "as": "script"
+        }
+    ],
+    "url": "https://courses.love2dev.com",
+    "location": "USA",
+    "colors": {
+        "brand-color1": "#31323A",
+        "brand-color2": "#80828E",
+        "brand-color3": "#9A9AA1",
+        "brand-color4": "#c30000",
+        "brand-color5": "#7E040E",
+        "brand-color6": "#DFD6D9"
+    },
+    "image": {
+        "img": "https://love2dev.com/love2dev310x310.png",
+        "width": 310,
+        "height": 310
+    }
+}

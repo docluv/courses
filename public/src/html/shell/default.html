@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <base href="/">
+
+    <title>{{title}}</title>
+
+    {{#css}}<link href="{{{.}}}" rel="stylesheet">{{/css}}
+
+    {{#preloads}}<link rel="preload" href="{{{resource}}}" as="{{as}}"> {{/preloads}}
+
+    <meta name="description" content="{{description}}">
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link href="favicon.ico" rel="shortcut icon">
+
+    <meta name="theme-color" content="#cf0d2b">
+
+    <link rel="apple-touch-icon" href="meta/android/android-launchericon-192-192.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+
+    <link href="manifest.json" rel="manifest">
+    <link href="humans.txt" rel="author">
+</head>
+
+<body>
+
+    <%Layout%>
+
+    <div class="footer-prompt ad2hs-prompt bounceInUp">
+        <h3>Add Courses to Your Homescreen!</h3>
+        <div class="btn btn-premium">Add</div>
+    </div>
+
+    <script>
+        try {
+            var scripts = [{{{scripts}}}],
+                src,
+                pendingScripts = [],
+                firstScript = document.scripts[0];
+
+            if (typeof Object.assign != 'function') {
+
+                scripts.unshift("js/libs/polyfil/object.assign.js");
+
+            }
+
+            if (typeof Promise === "undefined" || Promise.toString().indexOf("[native code]") === -1) {
+
+                scripts.unshift("js/libs/polyfil/es6-promise.min.js");
+
+            }
+
+            if (typeof fetch === "undefined" || fetch.toString().indexOf("[native code]") === -1) {
+
+                scripts.unshift("js/libs/polyfil/fetch.js");
+
+            }
+
+            if (typeof IntersectionObserver === "undefined" || IntersectionObserver.toString().indexOf("[native code]") ===
+                -1) {
+
+                scripts.unshift("js/libs/polyfil/intersection-observer.js");
+
+            }
+
+            // Watch scripts load in IE
+            function stateChange() {
+                // Execute as many scripts in order as we can
+
+                var pendingScript;
+
+                while (pendingScripts[0] && pendingScripts[0].readyState == 'loaded') {
+                    pendingScript = pendingScripts.shift();
+                    // avoid future loading events from this script (eg, if src changes)
+                    pendingScript.onreadystatechange = null;
+                    // can't just appendChild, old IE bug if element isn't closed
+                    firstScript.parentNode.insertBefore(pendingScript, firstScript);
+                }
+
+                console.log("scripts should be loaded now");
+
+            }
+
+            // loop through our script urls
+            while (src = scripts.shift()) {
+
+                if ('async' in firstScript) { // modern browsers
+
+                    script = document.createElement('script');
+                    script.src = src;
+                    script.async = false;
+                    document.body.appendChild(script);
+
+                } else if (firstScript.readyState) { // IE<10
+                    // create a script and add it to our todo pile
+                    script = document.createElement('script');
+                    pendingScripts.push(script);
+                    // listen for state changes
+                    script.onreadystatechange = stateChange;
+                    // must set src AFTER adding onreadystatechange listener
+                    // else we’ll miss the loaded event for cached scripts
+                    script.src = src;
+                } else { // fall back to defer
+                    document.write('<script src="' + src + '" defer></' + 'script>');
+                }
+            }
+
+        } catch (error) {
+
+            alert(error);
+
+        }
+    </script>
+
+</body>
+
+</html>

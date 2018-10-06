@@ -1,0 +1,12 @@
+{
+    "slug": "register",
+    "title": "PWA Courses User Registration",
+    
+    "author": "Chris Love",
+    "approved": true,
+    "published": "2009-10-10T14:28:00Z",
+    "active": true,
+    "sitemap": true,
+    "shell": "default",
+    "layout": "default"
+}
