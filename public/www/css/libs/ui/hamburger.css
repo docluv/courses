@@ -1,0 +1,65 @@
+/* Mixin */
+/* Complimentary Color Scheme */
+/* Subtle Color Scheme */
+/* Start Hamburger */
+.hamburger-nav {
+  width: 45px;
+  height: 40px;
+  vertical-align: top;
+  margin: 3% 3% 0 3%;
+  text-align: center;
+  line-height: 40px;
+  z-index: 9989;
+  position: absolute;
+  right: 2%;
+}
+.hamburger-bar-wrapper {
+  width: 45px;
+  height: 40px;
+  display: block;
+  margin: 0;
+  position: relative;
+}
+.hamburger-bar,
+.hamburger-bar:before,
+.hamburger-bar:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 2px;
+  width: 30px;
+  background: #000;
+  position: absolute;
+  display: block;
+  content: '';
+  bottom: 25px;
+  transition: all 500ms ease-in-out;
+}
+.hamburger-bar:before {
+  top: 8px;
+}
+.hamburger-bar:after {
+  bottom: 8px;
+}
+.menu-toggle .hamburger-bar {
+  background-color: transparent;
+}
+.menu-toggle .hamburger-bar:before,
+.menu-toggle .hamburger-bar:after {
+  top: 2px;
+}
+.menu-toggle .hamburger-bar:before {
+  transform: rotate(45deg);
+}
+.menu-toggle .hamburger-bar:after {
+  transform: rotate(-45deg);
+}
+.menu-toggle .hamburger-bar:before,
+.menu-toggle .hamburger-bar:after {
+  background: #DFD6D9;
+}
+@media (min-width: 960px) {
+  .hamburger-nav {
+    display: none;
+  }
+}
+/* End Hamburger */

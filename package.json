@@ -6,24 +6,24 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "api-server": "json-server --watch db.json --port 15601",
-        "web-server": "http-server www/public/ -p 15600 -c -i"
+        "web-server": "http-server public/www/ -p 15600 -c -i"
     },
     "author": "Chris Love",
     "private": true,
     "devDependencies": {
-        "json-server": "*",
-        "http-server": "*",
-        "mustache": "*",
+        "cheerio": "*",
+        "clean-css": "*",
         "faker": "*",
         "glob": "*",
+        "http-server": "*",
+        "json-server": "^0.14.0",
         "lodash": "*",
-        "strip-bom": "*",
         "mkdirp": "*",
+        "mustache": "*",
+        "ncp": "*",
         "qr-encode": "*",
+        "strip-bom": "*",
         "uglify-js": "*",
-        "uncss": "*",
-        "ba64": "*",
-        "cheerio": "*",
-        "clean-css": "*"
+        "uncss": "*"
     }
 }

@@ -1,0 +1,378 @@
+.hero {
+  position: relative;
+  padding: 3% 5%;
+}
+
+.full-screen-hero {
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 1000px;
+  position: relative;
+  padding: 3% 5%;
+}
+
+.hero::before {
+  background-size: cover;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.hero input,
+.hero .form-control:focus {
+  color: #fff;
+}
+
+.hero textarea,
+.hero textarea.form-control:focus {
+  color: #000;
+  height: 7rem;
+}
+
+.hero-25::after {
+  opacity: .25;
+}
+
+.hero-40::after {
+  opacity: .4;
+}
+
+.hero-70::after {
+  opacity: .7;
+}
+
+.hero-black-bg::after {
+  background-color: #111;
+}
+
+.hero-purple-bg::after {
+  background-color: #563d7c;
+}
+
+.hero-red-bg::after {
+  background-color: #c62828;
+}
+
+.hero-gray::after {
+  background-color: #aaa;
+}
+
+.hero-burgandy-bg::after {
+  background-color: #7C020C;
+}
+
+
+.hero-bkg {
+  display: block;
+  max-width: none;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -2;
+}
+
+.hero-bkg-overlay {
+  background: #000;
+  display: block;
+  position: absolute;
+  max-width: none;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  opacity: .25;
+  top: 0;
+  left: 0;
+}
+
+.hero-container {
+  margin: 0 0 20px 0;
+
+  overflow: hidden;
+  z-index: 1;
+  width: 100%;
+  min-height: 1200px;
+  height: auto;
+  background: transparent;
+  max-width: 1300px;
+  margin: 0 auto;
+  position: relative;
+  top: 35%;
+  padding: 2%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+}
+
+.hero-content {
+  z-index: 2;
+  margin-bottom: 40px;
+  padding: 0 30px;
+  text-align: center;
+  box-sizing: border-box;
+  top: 50%;
+  transform: translateY(15%);
+  opacity: 1;
+}
+
+.hero-content h1,
+.hero-content h2,
+.hero-content h3,
+.hero-content h4,
+.hero-content h5 {
+  font-size: 28px;
+  display: block;
+  width: 100%;
+  font-weight: 600;
+  white-space: normal;
+}
+
+.hero-content p {
+  width: 90%;
+  text-align: center;
+  display: block;
+  margin: 1% auto;
+}
+
+.hero-message {
+  color: #fff;
+  text-shadow: #343a40 2px 2px;
+  min-width: 100%;
+  min-height: 20em;
+  position: relative;
+}
+
+.hero-message::before {
+  content: "";
+  display: block;
+  position: absolute;
+  margin: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  opacity: 0.6;
+  background-color: #343a40;
+}
+
+.hero-header {
+  width: 100%;
+  text-align: center;
+}
+
+.hero-title,
+.hero-sub-title {
+  width: 100%;
+  display: block;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-title {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+
+.hero-text {
+  font-size: 2rem;
+  padding: 1%;
+}
+
+.hero-reference-text {
+  font-size: 1rem;
+  padding: 1%;
+}
+
+.bg-hero-white::after {
+  background-color: #fff;
+}
+
+.z-index-999 {
+  z-index: 99999;
+}
+
+
+.optin-hero-block {
+  text-align: center;
+  padding: 5%;
+}
+
+.optin-hero-block h1 {
+  font-size: 2.25em;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.optin-hero-block-form-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  padding: 5%;
+}
+
+.optin-hero-block-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+
+  .hero-content {
+    padding-bottom: 30px;
+    width: 100%;
+    max-width: 1300px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 0 10px;
+    color: #fff;
+    transform: translateY(-50%);
+  }
+
+  .hero-content h1,
+  .hero-content h2,
+  .hero-content h3,
+  .hero-content h4,
+  .hero-content h5 {
+    font-size: 48px;
+  }
+
+  .hero-content p {
+    width: 86%;
+  }
+
+  .optin-hero-block-form-wrapper {
+    width: 75%;
+  }
+
+
+  .pc-item.optin-hero-block .optin-hero-block-form-wrap {
+    max-width: 66.66667%;
+  }
+
+}
+
+@media screen and (min-width: 992px) {
+
+  .hero-fixed::before {
+    background-attachment: fixed;
+  }
+
+  .hero-container {
+    top: 0;
+    padding: 6% 30px;
+  }
+
+  .hero-content p {
+    width: 80%;
+  }
+
+  .optin-hero-block-form-wrapper {
+    width: 60%;
+    padding: 3%;
+  }
+
+}
+
+@media(min-width:1024px) {
+
+  .hero-container {
+    min-height: 100%;
+    flex-direction: row;
+    align-content: center !important;
+    align-items: flex-start !important;
+  }
+
+  .hero-message {
+    min-width: 50%;
+    min-height: 12em;
+    right: 5%;
+  }
+
+  .pc-item.optin-hero-block .optin-hero-block-form-wrap {
+    margin-top: 2.5rem;
+    max-width: 500px;
+  }
+
+  .optin-hero-block-wrapper {
+    flex-direction: row;
+  }
+
+  .optin-hero-block-half {
+    width: 50%;
+    margin: 0;
+    padding: 0 6%;
+  }
+
+}
+
+.contact-us-hero::before {
+  background-image: url(/img/contact-us-hero-320x203.jpg);
+  background-position-x: -300px;
+}
+
+@media (min-width: 321px) {
+  .contact-us-hero::before {
+    background-image: url(/img/contact-us-hero-460x291.jpg);
+  }
+}
+
+@media (min-width: 461px) {
+  .contact-us-hero::before {
+    background-image: url(/img/contact-us-hero-720x455.jpg);
+  }
+}
+
+@media (min-width: 721px) {
+  .contact-us-hero::before {
+    background-image: url(/img/contact-us-hero-980x620.jpg);
+    background-position-x: 0;
+  }
+}
+
+@media (min-width: 981px) {
+  .contact-us-hero::before {
+    background-image: url(/img/contact-us-hero-1240x784.jpg);
+  }
+}
+
+@media (min-width: 1241px) {
+  .contact-us-hero::before {
+    background-image: url(/img/contact-us-hero-1500x948.jpg);
+  }
+}
+
+@media (min-width: 1501px) {
+  .contact-us-hero::before {
+    background-image: url(/img/contact-us-hero-1760x1112.jpg);
+  }
+}
+
+@media (min-width: 1761px) {
+  .contact-us-hero::before {
+    background-image: url(/img/contact-us-hero-1920x1213.jpg);
+  }
+}

@@ -10,6 +10,7 @@ const utils = require("./utils"),
     fs = require("fs"),
     path = require("path"),
     glob = require("glob"),
+    ncp = require('ncp').ncp,
     template = require("mustache"),
     stripBom = require("strip-bom"),
     _ = require("lodash"),
@@ -145,9 +146,102 @@ function buildContent() {
 
 }
 
+const deleteFile = file => {
+
+    fs.unlink(file, error => {
+
+        if (error) {
+            throw error;
+        }
+
+    });
+
+}
+
+const deleteSupportFiles = () => {
+
+    return new Promise((resolve, reject) => {
+
+        glob("../public/www/js/**/*.js", function (er, files) {
+
+            for (let i = 0; i < files.length; i++) {
+
+                deleteFile(files[i]);
+
+            }
+
+            glob("../public/www/css/**/*.css", function (er, files) {
+
+                for (let i = 0; i < files.length; i++) {
+
+                    deleteFile(files[i]);
+
+                }
+
+                glob("../public/www/fonts/**/*.*", function (er, files) {
+
+                    for (let i = 0; i < files.length; i++) {
+
+                        deleteFile(files[i]);
+
+                    }
+
+                    resolve();
+
+                });
+
+            });
+
+        });
+
+    });
+
+}
+
+const copySupportFiles = () => {
+
+    ncp("../public/src/js", "../public/www/js", function (err) {
+        if (err) {
+            return console.error(err);
+        }
+        console.log('done!');
+    });
+
+    ncp("../public/src/css", "../public/www/css", function (err) {
+        if (err) {
+            return console.error(err);
+        }
+        console.log('done!');
+    });
+
+    ncp("../public/src/fonts", "../public/www/fonts", function (err) {
+        if (err) {
+            return console.error(err);
+        }
+        console.log('done!');
+    });
+
+    ncp("../public/src/html", "../public/www/html", function (err) {
+        if (err) {
+            return console.error(err);
+        }
+        console.log('done!');
+    });
+
+    ncp("../public/src/img", "../public/www/img", function (err) {
+        if (err) {
+            return console.error(err);
+        }
+        console.log('done!');
+    });
+
+}
+
 parseAppConfig(path.resolve("../config/site.json"))
     .then(loadAppShell)
     .then(loadLayouts)
+    .then(deleteSupportFiles)
+    .then(copySupportFiles)
     .then(buildContent)
     .then(function () {
 

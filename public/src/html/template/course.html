@@ -1,0 +1,18 @@
+<div class="course-detail">
+    <h1 class="course-title">{{title}}</h1>
+    <div class="course-details-container">
+        <p class="course-image"><img src="img/people/{{mugshot}}" alt="{{instructor}}"></p>
+        <p class="course-text">Instructor: <b>{{instructor}}</b></p>
+        <p class="course-text">Credits: {{credits}}</p>
+        <p class="course-text">Time: {{time}}</p>
+        <p class="course-text">Building: {{building}}</p>
+        <p class="course-text">Room: {{room}}</p>
+        <p class="course-text">Capacity: {{capacity}}</p>
+        </p>
+    </div>
+    <div class="course-actions">
+        <input type="checkbox" name="cb{{id}}">
+        <label for="cb{{id}}" value="{{id}}" class="big-check">Schedule</label>
+    </div>
+    <div class="course-description"><p>{{{description}}}</p></div>
+</div>

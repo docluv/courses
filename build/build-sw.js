@@ -11,12 +11,8 @@ const buildSW = () => {
             "**/*.{html,ico,jpg,png,JPG,jpeg,js}"
         ],
         "globIgnores": [
-            "css/**/*.*", "img/**/*.*", "blog/**/*.*", "blog-*/**/*.*", "meta/**/*.*", 
-            "js/libs/addtohomescreen.min.js", "workbox-v3.4.1/**/*.*",
-            "tags/**/*.*", "articles/**/*.*", 
-            "2x/**/*.*", "ahrefs_5a03081536bf029306bef81b43fc7696b6c06ae3665913d5db668b0d875a3f8d.html",
-            "dnrpwa/**/*.*", "fullstackjs/**/*.*", "pwa-back-to-school/**/*.*",
-            "js/libs/polyfil/*.*", "font/**/*.*", "sw.js", "images/**/*.*", "blogs/**/*.*"
+            "css/**/*.*", "img/**/*.*", "course/**/*.*", "courses/**/*.*", "profile/**/*.*", 
+            "workbox-v3.6.2/**/*.*", "js/libs/polyfil/*.*", "sw.js"
         ],
         "swSrc": '../public/src/sw-src.js',
         "swDest": "../public/www/sw.js"

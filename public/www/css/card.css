@@ -1,0 +1,243 @@
+.card-panel {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 2%;
+    flex: 1 0 auto;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    flex: 0 0 94%;
+    max-width: 94%;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+    box-shadow: none;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    border-radius: 2px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    margin-bottom: 2rem;
+}
+
+.card a,
+a.card {
+    text-decoration: none;
+    color: #363636;
+}
+
+.card .card-image {
+    position: relative;
+    min-height: 300px;
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.card .card-image img {
+    display: block;
+    border-radius: 2px 2px 0 0;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.card .card-image .card-title {
+    color: #fff;
+    position: absolute;
+    overflow: hidden;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5em;
+    max-width: 100%;
+    padding: 6px 12px 12px 12px;
+    background-color: rgba(0, 0, 0, .85);
+    text-shadow: #000 1px 1px;
+}
+
+.card .card-content {
+    padding: 24px;
+    border-radius: 0 0 2px 2px;
+    overflow: hidden;
+  }
+  
+
+.card .card-title {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    background-color: #333; /* #c62828; */
+    height: 112px; /* 3X font-size */
+    padding: 2px 4px;
+    overflow:hidden;
+    margin-bottom: 0;
+}
+
+
+.green-card .ms-icon,
+.green-card .btn {
+    background-color: #3a3;
+    color: #fff;
+}
+
+.green-card .color-info {
+    color: #3a3;
+}
+
+.card .ms-icon,
+.card .btn {
+    color: #fff;
+}
+
+
+.red-card .ms-icon,
+.red-card .btn {
+    background-color: #c62828;
+    color: #fff;
+}
+
+.red-card .color-info {
+    color: #c62828;
+}
+
+
+.burgandy-card .ms-icon,
+.burgandy-card .btn {
+    background-color: #7C020C;
+    color: #fff;
+}
+
+.burgandy-card .color-info {
+    color: #7C020C;
+}
+
+.card-300 .ms-icon,
+.card-300 .btn{
+    background-color: #e57373;
+}
+
+.card-300 .color-info{
+    color: #e57373;
+}
+
+.card-300 .ms-icon,
+.card-300 .btn {
+    background-color: #e57373;
+    color: #fff;
+}
+
+
+.purple-card .ms-icon,
+.purple-card .btn {
+    background-color: #800080;
+    color: #fff;
+}
+
+.purple-card .color-info {
+    color: #800080;
+}
+
+.content-cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 3px;
+    margin-left: 3px;
+}
+
+.card .card-block,
+.card .card-body,
+.card.card-block,
+.card.card-body {
+    padding: 20px;
+    padding: 2rem;
+}
+
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+
+.card .card-block>.ms-icon,
+.card .card-body>.ms-icon {
+    margin: 10px 0;
+    margin: 1rem 0;
+}
+
+.card-panel .card-full {
+    width: 96%;
+    flex: 0 0 96% !important;
+    max-width: 96% !important;
+}
+
+
+@media (min-width: 576px) {
+    .card-panel {
+        /* flex-basis: 0;
+        flex-grow: 1; */
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .card-panel {
+        flex-direction: row;
+    }
+
+    .card-panel .card {
+        flex: 0 0 46%;
+        max-width: 46%;
+        margin: 2%;
+    }
+
+}
+
+@media (min-width: 1025px) {
+
+    .card-panel .card {
+        flex: 0 0 29%;
+        max-width: 29%;
+    }
+
+    .card-panel .card-2,
+    .card-panel .card-3{
+        flex: 0 0 46%;
+        max-width: 46%;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    .card-panel .card {
+        flex: 0 0 21%;
+        max-width: 21%;
+    }
+
+    .card-panel .card-3{
+        flex: 0 0 29%;
+        max-width: 29%;
+    }
+
+    .card-panel .card-2{
+        flex: 0 0 46%;
+        max-width: 46%;
+    }
+
+}

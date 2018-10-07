@@ -1,0 +1,52 @@
+.feature-headline-2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    width: 100%;
+    margin: 1% 5%;
+}
+
+.feature-headline-3 {
+    font-size: 1.3em;
+    font-weight: bold;
+    width: 100%;
+    margin: 1% 5%;
+}
+
+.feature-headline-4 {
+    font-size: 1.15em;
+    font-weight: bold;
+    width: 100%;
+    margin: 1% 5%;
+}
+
+a {
+    color: #333;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+@media(min-width: 992px) {
+    .feature-headline-2 {
+        font-size: 3.5em;
+    }
+    .feature-headline-3 {
+        font-size: 1.75em;
+    }
+    .feature-headline-3 {
+        font-size: 1.2em;
+    }
+}
+
+@media(min-width: 1200px) {
+    @media(min-width: 992px) {
+        .feature-headline-2 {
+            font-size: 4em;
+        }
+        .feature-headline-3 {
+            font-size: 2em;
+        }
+        .feature-headline-4 {
+            font-size: 1.5em;
+        }
+    }
+}
