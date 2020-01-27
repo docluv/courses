@@ -289,6 +289,10 @@ nav a {
     background-color: #fff;
 }
 
+.start-body{
+    margin-top: 100px;
+}
+
 .float-left {
     float: left;
     margin-right: 5%;

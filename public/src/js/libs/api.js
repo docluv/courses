@@ -91,8 +91,6 @@ var coursesAPI = (function () {
 
             var self = this;
 
-            authorize = authorize || true;
-
             if (authorize) {
 
                 return self.verifyToken()
@@ -101,6 +99,10 @@ var coursesAPI = (function () {
                     return fetchApiJSON(entity);
 
                 });
+            } else {
+
+                return fetchApiJSON(entity);
+
             }
 
         },
@@ -206,7 +208,7 @@ var coursesAPI = (function () {
 
                     if (token) {
 
-                        pwaTicketAPI.token = token;
+                        coursesAPI.token = token;
 
                         return token;
 
@@ -221,12 +223,12 @@ var coursesAPI = (function () {
 
         login: function (credentials) {
 
-            return this.apiGet("users/?userName=" +
+            return this.apiGet("students/?userName=" +
                     credentials.username +
                     "&password=" + credentials.password, false)
                 .then(function (token) {
 
-                    if (token.length > 0) {
+                    if (token && token.length > 0) {
 
                         return saveAuthToken(token[0]);
 

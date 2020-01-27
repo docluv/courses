@@ -11,8 +11,8 @@ const buildSW = () => {
             "**/*.{html,ico,jpg,png,JPG,jpeg,js}"
         ],
         "globIgnores": [
-            "css/**/*.*", "img/**/*.*", "course/**/*.*", "courses/**/*.*", "profile/**/*.*", 
-            "workbox-v3.6.2/**/*.*", "js/libs/polyfil/*.*", "sw.js"
+            "css/**/*.*", "img/people/**/*.*", "course/**/*.*", "courses/**/*.*", "profile/**/*.*", 
+            "workbox-v3.6.2/**/*.*", "js/libs/polyfil/*.*", "sw.js", "meta/**/*.*"
         ],
         "swSrc": '../public/src/sw-src.js',
         "swDest": "../public/www/sw.js"

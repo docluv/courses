@@ -98,20 +98,24 @@ function loadPageHTML(slug) {
 
 const buildPage = (file) => {
 
-    let page = utils.readJSON(path.resolve(file), utf8),
-        body = loadPageHTML(page.slug);
+    let options = utils.readJSON(path.resolve(file), utf8),
+        body = loadPageHTML(options.slug);
 
     //load HTML from HTML source
     //took this out to assume the page has already had the body set before this step
-    //body = loadPageHTML(page.slug);
+    //body = loadPageHTML(options.slug);
 
     if (body && body !== "") {
-        page.body = body.replace(/\r\n/g, "")
+        options.body = body.replace(/\r\n/g, "")
             .replace(/\n\r/g, "")
             .replace(/\s{2,}/g, " ");
     }
 
-    page = Object.assign({}, project.config, page);
+    let page = Object.assign({}, project.config, options);
+
+    if (options.scripts) {
+        page.scripts = project.config.scripts + ", \"" + options.scripts + "\"";
+    }
 
     return page;
 
@@ -200,6 +204,7 @@ const deleteSupportFiles = () => {
 
 const copySupportFiles = () => {
 
+    //simple asset copy routine
     ncp("../public/src/js", "../public/www/js", function (err) {
         if (err) {
             return console.error(err);
@@ -215,20 +220,6 @@ const copySupportFiles = () => {
     });
 
     ncp("../public/src/fonts", "../public/www/fonts", function (err) {
-        if (err) {
-            return console.error(err);
-        }
-        console.log('done!');
-    });
-
-    ncp("../public/src/html", "../public/www/html", function (err) {
-        if (err) {
-            return console.error(err);
-        }
-        console.log('done!');
-    });
-
-    ncp("../public/src/img", "../public/www/img", function (err) {
         if (err) {
             return console.error(err);
         }

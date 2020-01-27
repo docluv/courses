@@ -147,6 +147,4 @@
 
     }
 
-    lazyImages.lazyDisplay();
-
 })();

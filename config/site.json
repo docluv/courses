@@ -17,8 +17,9 @@
     "domain": "https://courses.love2dev.com/",
     "shell": "default",
     "scripts": [
-        "js/libs/lazy.images.js",
+        "js/libs/localforage.min.js",
         "js/libs/ui/form.submission.js",
+        "js/libs/api.js",
         "js/boot.js"
     ],
     "css": [
@@ -36,10 +37,6 @@
         "css/app/footer.css"
     ],
     "preloads": [{
-            "resource": "js/libs/lazy.images.js",
-            "as": "script"
-        },
-        {
             "resource": "js/libs/ui/form.submission.js",
             "as": "script"
         },

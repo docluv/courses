@@ -142,3 +142,22 @@ db.courses = generateCourses();
 generateStudents();
 
 fs.writeFileSync(path.resolve("../db.json"), JSON.stringify(db), utf8);
+
+fs.writeFileSync(path.resolve("../public/www/data/courses.json"), JSON.stringify(db.courses), utf8);
+fs.writeFileSync(path.resolve("../public/www/data/students.json"), JSON.stringify(db.students), utf8);
+
+for (let index = 0; index < db.courses.length; index++) {
+    const course = db.courses[index];
+
+    fs.writeFileSync(path.resolve("../public/www/data/courses/" + course.id + ".json"), JSON.stringify(course), utf8);
+
+}
+
+console.log(db.students.length);
+
+for (let index = 0; index < db.students.length; index++) {
+    const student = db.students[index];
+
+    fs.writeFileSync(path.resolve("../public/www/data/students/" + student.id + ".json"), JSON.stringify(student), utf8);
+
+}
